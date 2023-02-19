@@ -1,0 +1,168 @@
+.reviews {
+  padding-top: 178px;
+  padding-bottom: 393px;
+  background-image: url(../images/reviews/reviews-bg-mob-1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    & {
+      background-image: url(../images/reviews/reviews-bg-mob-2x.jpg);
+    }
+  }
+
+  @include tablet {
+    background-image: url(../images/reviews/reviews-bg-tablet-1x.jpg);
+    padding-top: 368px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/reviews/reviews-bg-tablet-2x.jpg);
+      }
+    }
+  }
+
+  @include desktop {
+    padding-top: 440px;
+    background-image: url(../images/reviews/reviews-bg-desk-1x.jpg);
+    padding-bottom: 253px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/reviews/reviews-bg-desk-2x.jpg);
+      }
+    }
+  }
+}
+
+.reviews__container {
+  padding: 0px 0px;
+}
+
+.reviews__slider {
+  width: 100vw;
+}
+
+.slider__wrapper {
+  width: 100vw;
+  text-align: center;
+}
+
+.slider__slide {
+  width: 100vw;
+  text-align: center;
+}
+
+.slide__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: auto;
+
+  @media tablet {
+    padding: 0 auto;
+  }
+
+  @include desktop {
+    padding: 0 auto;
+  }
+}
+
+.slide__image {
+  width: 85px;
+  height: 85px;
+  margin-bottom: 32px;
+  
+}
+
+.slide__wrapper {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 35px 39px;
+  border-radius: 10px;
+  background-color: $bgcolor-primary;
+  margin-bottom: 32px;
+
+  @media screen and(max-width:479px) {
+    max-width: 440px;
+  }
+
+  @include mobile {
+    width: 440px;
+  }
+
+  @include tablet {
+    width: 705px;
+    padding: 28px 80px 29px 80px;
+    border-radius: 24px;
+  }
+
+  @include desktop {
+    width: 968px;
+    padding: 43px 109px;
+  }
+
+}
+
+.slide__text {
+  @include font(12, 400, 30.6, 0.04);
+
+  @include tablet {
+    @include font(14, 500, 26, 0.04);
+  }
+
+  @include desktop {
+    @include font(16, 500, 30, 0.04);
+  }
+}
+
+.slide__label {
+  margin-bottom: 42px;
+
+  @include font(20, 500, 27, 0.04);
+  color: $color-black-primary;
+
+  @include tablet {
+    @include font(16, 500, 30, 0.04);
+    margin-bottom: 62px;
+  }
+
+  @include desktop {
+    @include font(16, 500, 30, 0.04);
+    margin-bottom: 62px;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 18px);
+}
+
+.swiper-pagination-bullet {
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 12px)
+  );
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size, 12px)
+  );
+  background: var(--swiper-pagination-bullet-inactive-color, #d9d9d9);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $bgcolor-primary;
+}
